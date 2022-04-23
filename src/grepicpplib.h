@@ -1,5 +1,10 @@
 #include <cassert>
+#include <cstring>
+#include <string>
+#include <vector>
 #define assertm(exp, msg) assert(((void)msg, exp))
+
+using namespace std;
 
 class CONFIG {
     public:
@@ -14,3 +19,4 @@ class CONFIG {
 };
 
 void run(CONFIG );
+std::vector<std::string> search(string, std::vector<std::string>);
