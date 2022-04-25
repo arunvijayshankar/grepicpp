@@ -12,7 +12,6 @@ int main(int argc, // argument count
 {
 
     CONFIG nConfig(argc, argv);
-
     cout << "Searching for `" << nConfig.query << "`\n";
     cout << "In file `" << nConfig.filename << "`\n";
 
