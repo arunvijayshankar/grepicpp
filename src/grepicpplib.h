@@ -2,7 +2,7 @@
 #include <cstring>
 #include <string>
 #include <vector>
-#define assertm(exp, msg) assert(((void)msg, exp))
+#include <iostream>
 
 using namespace std;
 
@@ -13,7 +13,9 @@ class CONFIG {
         bool case_sensitive;
 
         CONFIG(int argc, char *args[]) {
-            assertm((argc == 3), "Not enough arguments");
+            if ( argc < 3 ) {
+                cerr << "Not enough arguments" << "\n";
+            }
             query = args[1];
             filename = args[2];
             case_sensitive = (getenv("CASE_INSENSITIVE") == NULL) ? true : false;

@@ -19,7 +19,7 @@ string toLower(string data) {
 void run(CONFIG nConfig) {
     fstream file (nConfig.filename);
     if ( !file.is_open() ) {
-        cout << "Error opening file `" << nConfig.filename <<"`\n";
+        cerr << "Error opening file `" << nConfig.filename <<"`\n";
         return;
     }
     std::vector<std::string> contents;
